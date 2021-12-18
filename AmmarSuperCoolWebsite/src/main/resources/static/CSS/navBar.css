@@ -246,10 +246,7 @@ body{
     transition: all 0.5s ease;
 }
 
-.home_content .text{
-    font-size: 28px;
-    color: white;
-}
+
 
 .sidebar.active ~ .home_content{
     width: calc(100% - 240px);
