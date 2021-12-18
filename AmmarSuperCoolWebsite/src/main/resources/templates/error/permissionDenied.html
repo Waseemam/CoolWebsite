@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PERMISSION DENIED</title>
+    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet"
+          href="../../static/CSS/myStyles.css">
+</head>
+
+<div th:replace="fragments/basicStructure :: header('Error 403')"></div>
+<body>
+<h1>Permission Denied <span sec:authentication="name">
+</span> Does not have the authority</h1>
+
+<a th:href="@{/}">Go Back To Menu</a>
+</body>
+</html>
