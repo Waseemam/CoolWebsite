@@ -1,0 +1,11 @@
+.home_content .text{
+    transform: translateX(20px);
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+}
+
+.home_content .randomText p{
+    color: white;
+    padding: 20px;
+}
