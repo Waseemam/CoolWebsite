@@ -1,0 +1,20 @@
+.flexContainer{
+    display: flex;
+    padding: 20px;
+    width: 90%;
+}
+
+.flexContainer .about-me{
+    width: 50%;
+    height: fit-content;
+    background-color: grey;
+    padding: 20px
+}
+
+.flexContainer .about-me .paragraph{
+    color: #ceffff;
+
+}
+.flexContainer .about-me .myImage{
+    width: 1.5vh;
+}

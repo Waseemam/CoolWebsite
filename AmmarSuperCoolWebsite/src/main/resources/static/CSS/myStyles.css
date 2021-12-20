@@ -1,22 +1,9 @@
-.home_content .content .text{
-    transform: translateX(20px);
-    font-weight: bold;
-    font-size: 32px;
-    color: white;
-}
-
-.home_content .randomText p{
-    color: white;
-    padding: 20px;
-}
-
-.home_content .content{
-    padding: 25px;
-}
-
 .home_content .content p{
     margin-left: 50px;
     margin-top: 20px;
     color: white;
-    width: 2fr;
+}
+
+.home_content .content .pageTitle{
+    color: white;
 }

@@ -260,8 +260,6 @@
     left: 88%;
 }
 
-
-
 .home_content{
     position: absolute;
     height: 100%;
@@ -270,7 +268,15 @@
     transition: all 0.5s ease;
 }
 
+.home_content .content{
+    padding: 25px;
+}
 
+.home_content .content .pageTitle{
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+}
 
 .sidebar.active ~ .home_content{
     width: calc(100% - 240px);
