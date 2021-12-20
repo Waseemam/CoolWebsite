@@ -1,10 +1,3 @@
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-
 .sidebar{
     position: fixed;
     top: 0;
@@ -74,7 +67,7 @@ body{
     position: relative;
     height: 50px;
     width: 100%;
-    margin: 0 5px;
+    margin: 0;
     list-style: none;
     line-height: 50px;
 }
@@ -143,6 +136,15 @@ body{
     border-radius: 12px;
     margin-top: 10px;
     white-space: nowrap;
+}
+
+#selected{
+    background-color: #cc2900;
+    color: black;
+}
+
+#selected i{
+    color: #1a1a1a;
 }
 
 .sidebar ul li a:hover {
@@ -231,10 +233,30 @@ body{
     text-align: center;
     transition: all 0.4s ease;
 }
+
+.profile #log_in{
+    position: absolute;
+    left: 35%;
+    bottom: 5px;
+    transform: translateX(-30%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
 .profile #log_out:hover{
     background: #fff;
 }
-.sidebar.active .profile #log_out {
+.profile #log_in:hover{
+    background: #fff;
+}
+.sidebar.active .profile #log_out{
+    left: 88%;
+}
+.sidebar.active .profile #log_in{
     left: 88%;
 }
 
@@ -246,9 +268,15 @@ body{
     transition: all 0.5s ease;
 }
 
-.home_content .text{
-    font-size: 28px;
+.home_content .content{
+    padding: 25px;
+}
+
+.home_content .content .pageTitle{
+    font-weight: bold;
+    font-size: 32px;
     color: white;
+    margin-left: 50px;
 }
 
 .sidebar.active ~ .home_content{

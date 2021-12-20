@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Designs</title>
+</head>
+<body>
+
+<div class="grid-container" th:fragment="navBar">
+    <span class="grid-item grid-item-1"><a>Home Page</a></span>
+    <span class="grid-item grid-item-2"><a>add Contacts</a></span>
+    <span class="grid-item grid-item-3"><a>System Configuration</a></span>
+    <span class="grid-item grid-item-4"><a>Account Preferences</a></span>
+</div>
+
+
+<!--
+private int id;
+private String name;
+private String phoneNumber;
+private String description = "";
+-->
+
+<table class="redTable" th:fragment="contactTable(list)">
+    <tr><th>Name</th><th>Phone Number</th><th>Description</th><th>Action</th><th>Message</th></tr>
+    <tr th:each="item : ${list}">
+        <td th:text="${item.name}">id num</td>
+        <td th:text="${item.phoneNumber}"></td>
+        <td th:if="${item.description != null}" th:text="${item.description}"></td>
+        <td th:if="${item.description == null}"> - </td>
+        <td><a th:href="|@{/Edit/}${item.id}|">Edit</a> / <a th:href="|@{/Delete/}${item.id}|">Delete</a></td>
+        <td><a th:href="|@{/Message/}${item.id}|">Message</a></td>
+    </tr>
+</table>
+
+</body>
+</html>

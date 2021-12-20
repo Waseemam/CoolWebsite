@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+    <link th:href="@{/CSS/structureStyles.css}" rel="stylesheet"
+          href="../../static/CSS/structureStyles.css">
+    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet" href="../../static/CSS/myStyles.css">
+    <link rel="stylesheet" href="../../static/CSS/navBar.css" th:href="@{/CSS/navBar.css}">
+    <link rel="stylesheet" href="../../static/CSS/footer.css" th:href="@{/CSS/footer.css}">
+    <link rel="stylesheet" href="../../static/CSS/loader.css" th:href="@{/CSS/loader.css}">
+    <link rel="stylesheet" href="../../static/CSS/aboutMe.css" th:href="@{/CSS/aboutMe.css}">
+    <link th:href="@{https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css}" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer th:src="@{/js/navBar.js}" src="../../static/js/navBar.js"></script>
+    <script defer th:src="@{/js/loader.js}" src="../../static/js/loader.js"></script>
+    <script defer th:src="@{/js/aboutMe.js}" src="../../static/js/aboutMe.js"></script>
+</head>
+<body>
+<div th:replace="fragments/Structure :: navBar"></div>
+<div class="home_content">
+    <div class="content">
+        <h1 class="pageTitle">Syed Ammar Waseem</h1>
+        <div class="flexContainer">
+            <div class="about-me">
+                <span class="paragraph">
+                    Hello and welcome, my name is ammar and this page is just about me as a person.
+                    i am currently a 2nd year student at sheridan college for software development and
+                    network engineering, i consider backend-development, java generally all coding
+                    a hobby. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </span>
+            </div>
+
+            <div class="myImage">
+                <img th:src="@{images/AmmarFull.jpg}" src="../../static/images/AmmarFull.jpg" alt=""/>
+            </div>
+        </div>
+
+    </div>
+    <div th:replace="fragments/Structure :: footer">
+    </div>
+</div>
+
+<div id="loader" class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+</body>
+</html>

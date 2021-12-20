@@ -1,130 +1,18 @@
-.buttons {
-    font-size: 30px;
-    background-color: lightseagreen;
-    padding: 10px 5px;
-    margin: auto;
-    border: 2px solid blue;
-    display: inline-block;
-    border-radius: 10px;
-    box-shadow: 1px 1px 25px rgba(1, 4, 5, 0.35);
+.home_content .content .welcomeText{
+    margin-top: 20px;
+    margin-left: 120px;
+    width: 70rem;
+    height: fit-content;
+    border: 1px red solid;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow:0 0 1rem red;
 }
-.buttons a {
+
+.home_content .content .welcomeText span{
     color: white;
 }
 
-.title {
-    font-weight: bold;
-    width: 100%;
-    border:solid 4px lightseagreen;
-    border-bottom: solid 2px lightseagreen;
-
-}
-
-
-.under {
-    background-color: lightseagreen;
-    height: 3px;
-}
-
-.over {
-    background-color: lightseagreen;
-    height: 1px;
-}
-
-body {
-    padding: 0;
-}
-
-.buttons:hover {
-    background-color: lightblue;
-    box-shadow: 0 1px 1px #666666;
-    text-decoration: underline;
-}
-form {
-    font-weight: bold;
-    max-width: 450px;
-    background: #FAFAFA;
-    padding: 30px;
-    margin-left: 25px;
-    margin-top: 30px;
-    box-shadow: 1px 1px 25px rgba(1, 4, 5, 0.35);
-    border-radius: 10px;
-    border: 6px solid #305A72;
-}
-form>input[type=submit] {
-    display: grid;
-    justify-items: center;
-    margin: auto;
-}
-.coolTable {
-    max-width: 700px;
-    background: #FAFAFA;
-    padding: 30px;
-    margin: 30px auto;
-    box-shadow: 1px 1px 25px rgba(1, 4, 5, 0.35);
-    border-radius: 10px;
-    border: 6px solid #305A72;
-}
-.coolTable tr {
-    display: flex;
-    flex-direction: row;
-}
-.coolTable td {
-    border: 1px solid black;
-    padding: 10px;
-    width: 100px;
-    text-align: left;
-}
-.link {
-    text-decoration-color: blue;
-    font-style: italic;
-    text-decoration: underline;
-    color: blue;
-}
-
-#cool {
-    border: 1px mediumaquamarine solid;
-    padding: 20px;
-    margin: 15px 15px 15px 23px;
-}
-
-.errorText {
-    color: red;
-    max-width: fit-content;
-    margin: 10px auto auto auto;
-}
-.logInfo {
-    text-align: right;
-    width: available;
-    background-color: aquamarine;
-}
-.success {
-    color: blue;
-    max-width: fit-content;
-    margin: 10px auto auto auto;
-}
-.center {
-    margin: auto;
-    width: available;
-}
-
-#overlay {
-    position: absolute;
-    /* Sit on top of the page content */
-    display: block;
-
-    border-radius: 25px;
-
-    margin-top: 30px;
-
-    margin-left: 35px;
-
-    text-align: center;
-    width: 300px;
-    background-color: rgba(61, 213, 203, 0.79);
-    /* Black background with opacity */
-    z-index: 2;
-    /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer;
-    /* Add a pointer on hover */
+.home_content .content .pageTitle{
+    color: white;
 }
