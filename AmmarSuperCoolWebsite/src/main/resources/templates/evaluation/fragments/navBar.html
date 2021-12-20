@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="../../static/CSS/navBar.css" th:href="@{/CSS/navBar.css}">
+    <link th:href="@{https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css}" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../static/CSS/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer th:src="@{/js/navBar.js}" src="../../static/js/navBar.js"></script>
+</head>
+<body>
+    <title th:fragment="Title">Final for Soheila</title>
+
+
+    <div th:fragment="headingName">
+        <h1>Welcome to Soheila Kamali's Final</h1>
+    </div>
+
+    <div>
+
+    <div class="sidebar" th:fragment="navBar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-message-alt-detail'></i>
+                <div class="logo_name">AutoMessage</div>
+            </div>
+        </div>
+        <div class="menu">
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+    <ul class="navList">
+        <li>
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-user' ></i>
+                <span class="links_name">User</span>
+            </a>
+            <span class="tooltip">User</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-message' ></i>
+                <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+        </li>
+        <li>
+            <a th:href="@{/viewContacts}" href="#">
+                <i class='bx bxs-contact'></i>
+                <span class="links_name">Contacts</span>
+            </a>
+            <span class="tooltip">Contacts</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-download' ></i>
+                <span class="links_name">Download Data</span>
+            </a>
+            <span class="tooltip">Download</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-folder' ></i>
+                <span class="links_name">File Manager</span>
+            </a>
+            <span class="tooltip">Files</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bx-cart-alt' ></i>
+                <span class="links_name">Orders/Place</span>
+            </a>
+            <span class="tooltip">Orders/Place</span>
+        </li>
+        <li>
+            <a th:href="@{/}" href="#">
+                <i class='bx bxs-cog' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+        </li>
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <img th:src="@{/images/profile.jpg}" alt="">
+                <div class="name_job">
+                    <div class="name">Ammar Waseem</div>
+                    <div class="job">Web Developer</div>
+                </div>
+            </div>
+            <a th:href="@{/logout}" href="/logout">
+                <i class='bx bx-log-out' id="log_out"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+
+
+    <footer th:fragment="footer">
+        <div class="footer-content">
+            <h3>Auto Message</h3>
+            <p>
+                Welcome to Auto message where texting your customers is made easy
+            </p>
+            <ul class="socials">
+                <li><a th:href="@{https://www.facebook.com/profile.php?id=100010882751486}" href="#">
+                    <i class='bx bxl-facebook-circle' style="color: #4267B2"></i> Facebook
+                </a></li>
+                <li><a th:href="@{https://www.instagram.com/syed_ammar__/}" href="#">
+                    <i class='bx bxl-instagram' style="color: #8a3ab9"></i> Instagram
+                </a></li>
+                <li><a th:href="@{https://github.com/Waseemam/Waseemam}" href="#">
+                    <i class='bx bxl-github' style="color: #fff"></i> Github
+                </a></li>
+                <li><a th:href="@{https://twitter.com/ammar74252863}" href="#">
+                    <i class='bx bxl-twitter' style="color: #1DA1F2"></i> Twitter
+                </a></li>
+                <li><a th:href="@{https://www.youtube.com/channel/UCcZnck2LFeq1HNzz2q4QnHg}" href="#">
+                    <i class='bx bxl-youtube' style="color: #cc2900"></i> Youtube
+                </a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 AmmarWaseem. designed by Ammar</p>
+        </div>
+    </footer>
+</body>
+</html>

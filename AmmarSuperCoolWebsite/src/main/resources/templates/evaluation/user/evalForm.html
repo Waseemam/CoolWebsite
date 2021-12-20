@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation Form</title>
+    <link th:href="@{/CSS/evaluation/myStyles.css}" rel="stylesheet"
+          href="../../static/CSS/myStyles.css">
+</head>
+<div th:replace="evaluation/fragments/basicStructure :: header('Evaluation Form')"></div>
+<body>
+<div th:replace="evaluation/fragments/basicStructure :: navbar(2)"></div>
+
+<form action="/evalResults" method="post" th:object="${evaluation}">
+
+    <input type="hidden" th:value="*{id}" name="id">
+
+    <p><label>Evaluation Title:
+        <input id="title" name="title" type="text" th:value="*{title}"></label>
+    </p>
+
+    <p><label>Course:
+        <select id="course" name="course" required>
+            <option th:each="course : ${session.courses}"
+            th:text="${course.title}" th:value="${course.code}" >test</option>
+        </select>
+    </label></p>
+
+    <p><label for="mark">Mark:
+        <input id="mark" name="grade" type="text" th:value="*{grade}">
+    </label></p>
+
+    <p><label for="fullMark">Out Of:
+        <input id="fullMark" name="max" type="text" th:value="*{max}">
+    </label></p>
+
+    <p><label for="weight">Weighting:
+        <input id="weight" name="weight" type="text" th:value="*{weight}">
+    </label></p>
+
+    <p><label for="dueDate">Due Date
+        <input id="dueDate" name="dueDate" type="date" th:value="*{dueDate}">
+    </label></p>
+
+    <input type="submit">
+
+</form>
+</body>
+</html>

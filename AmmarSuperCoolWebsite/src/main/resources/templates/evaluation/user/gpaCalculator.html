@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Form</title>
+    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet"
+          href="../../static/CSS/myStyles.css">
+    <title>Gpa Calculator</title>
+</head>
+<div th:replace="fragments/basicStructure :: header('Gpa Calculator')"></div>
+<body>
+<div th:replace="fragments/basicStructure :: navbar(3)"></div>
+
+<div class="errorText" th:if="${completed.size()} == 0">
+    No Finished Courses Please Comeback when completing a course</div>
+
+<table class="coolTable" th:if="${completed.size()} > 0">
+    <tr class="tableHeading"><td>Course Code</td><td>Grade Points</td>
+        <td>Num of Credits</td><td>Completed</td>
+    </tr>
+    <tr th:each="course : ${completed}">
+        <td th:text="${course.code}"></td>
+        <td th:text="${course.gradePoints()}"></td>
+        <td th:text="${course.credits}"></td>
+        <td th:text="${course.complete}"></td>
+    </tr>
+
+</table>
+
+<table class="coolTable" th:if="${completed.size()} > 0">
+    <tr>
+        <td>Cumulative Gpa:</td>
+        <td th:text="${#numbers.formatDecimal(cumulativeGpa, 1, 2)}"></td>
+        <td>Total Credits:</td>
+        <td th:text="${totalCredits}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

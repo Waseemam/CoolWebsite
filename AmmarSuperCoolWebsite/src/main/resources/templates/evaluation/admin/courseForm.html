@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Course</title>
+    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet"
+          href="../../static/CSS/myStyles.css">
+    <title>Course Form</title>
+</head>
+
+<div th:replace="fragments/basicStructure :: header('Course Form')"></div>
+<body>
+<div th:replace="fragments/basicStructure :: navbar(4)"></div>
+
+<form action="/addCourse" method="post" th:object="${course}">
+    <p><label>Code: <input type="text" name="code" th:value="*{code}"
+                    placeholder="AAAA12345" pattern="[a-zA-Z]{4}\d{5}" required>
+    </label></p>
+
+    <p><label>Title: <input type="text" name="title" th:value="*{title}"
+                            required>
+    </label></p>
+
+    <p><label>Credits: <input type="number" name="credits" th:value="*{credits}"
+                              required>
+    </label></p>
+
+    <p><label>Completed: <input type="radio" name="complete"
+                                th:value="*{!complete}">
+    </label></p>
+
+    <p><label>Term: <input type="number" name="term" th:value="*{term}">
+    </label></p>
+
+    <p><label>finalGrade: <input type="text" name="finalGrade"
+                                 th:value="*{finalGrade}">
+    </label></p>
+
+    <input type="submit">
+
+</form>
+
+</body>
+</html>

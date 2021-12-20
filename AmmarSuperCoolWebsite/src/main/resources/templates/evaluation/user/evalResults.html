@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/CSS/evaluation/myStyles.css}" rel="stylesheet"
+          href="../../static/CSS/evaluation/myStyles.css">
+    <title>Evaluation Results</title>
+</head>
+<!---please pick myScripts.js for clicking ajax or mouseOver.js--->
+<script th:src="@{/js/mouseOver.js}" src="../../static/js/myScripts.js"></script>
+
+<div th:replace="evaluation/fragments/basicStructure :: header('Evaluation Results')"></div>
+<body id="body">
+<div th:replace="evaluation/fragments/basicStructure :: navbar(5)"></div>
+
+    <div class="errorText" th:if="${session.evaluations.size()} == 0">
+        No Evaluations Please Add</div>
+    <table class="coolTable" th:if="${session.evaluations.size()} > 0">
+        <tr class="tableHeading"><td>Due Date</td><td>Course</td><td>Title</td>
+            <td>Grade</td><td>Weight</td><td>Edit</td><td>Delete</td>
+        </tr>
+        <tr th:each="eval : ${session.evaluations}">
+            <td th:if="${eval.dueDate} != null" th:text="${eval.dueDate}"></td>
+            <td th:if="${eval.dueDate} == null">NOT GIVEN</td>
+            <td th:text="${eval.course}" th:id="${eval.course}" class="clink"></td>
+            <td th:text="${eval.title}"></td>
+            <td th:text="|${eval.grade}/${eval.getMax()}|"></td>
+            <td th:text="${eval.weight}"></td>
+            <td><a class="link" th:href="|@{/doEdit/}${eval.id}|">EDIT</a></td>
+            <td><a class="link" th:href="|@{/doDelete/}${eval.id}|">DELETE</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
