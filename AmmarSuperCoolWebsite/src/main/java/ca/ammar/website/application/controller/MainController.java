@@ -15,7 +15,7 @@ public class MainController {
 
     @GetMapping("/Dashboard")
     public String dashboard(){
-        return "/user/dashboard";
+        return "/mainPage/dashboard";
     }
 
     @GetMapping("/login")
