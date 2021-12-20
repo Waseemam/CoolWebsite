@@ -1,4 +1,4 @@
-console.log("dom Connected")
+console.log("navBar Connected")
 let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
 let search = document.querySelector(".bx-search");

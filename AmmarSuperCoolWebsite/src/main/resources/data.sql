@@ -10,3 +10,10 @@ INSERT INTO courses (code, title, credits)
 VALUES ('PROG24178','Object Oriented Programming 2',6);
 INSERT INTO courses (code, title, credits)
 VALUES ('SYST10199','Web Programming',3);
+
+insert into users (username, password)
+values ('Ammar', '1234');
+insert into roles (rolename)
+values ('ADMIN');
+insert into user_role (userid, roleid)
+values (1, 1);

@@ -23,24 +23,27 @@
         <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="navList">
-        <li>
-            <i class='bx bx-search' ></i>
-            <input type="text" placeholder="Search...">
-            <span class="tooltip">Search</span>
+        <li >
+            <a th:href="@{/}" href="#" id="home">
+                <i class='bx bx-home' ></i>
+                <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
         </li>
+
         <li>
-            <a th:href="@{/}" href="#">
+            <a th:href="@{/Dashboard}" href="#" id="dashboard">
                 <i class='bx bx-grid-alt' ></i>
                 <span class="links_name">Dashboard</span>
             </a>
             <span class="tooltip">Dashboard</span>
         </li>
         <li>
-            <a th:href="@{/}" href="#">
+            <a th:href="@{/aboutMe}" href="#" id="aboutMe">
                 <i class='bx bx-user' ></i>
-                <span class="links_name">User</span>
+                <span class="links_name">About Me</span>
             </a>
-            <span class="tooltip">User</span>
+            <span class="tooltip">About Me</span>
         </li>
         <li>
             <a th:href="@{/}" href="#">
@@ -94,8 +97,11 @@
                     <div class="job">Web Developer</div>
                 </div>
             </div>
-            <a th:href="@{/logout}" href="/logout">
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}" href="/logout">
                 <i class='bx bx-log-out' id="log_out"></i>
+            </a>
+            <a sec:authorize="isAnonymous()" th:href="@{/login}" href="/login">
+                <i class='bx bx-log-in' id="log_in"></i>
             </a>
         </div>
     </div>
@@ -127,7 +133,7 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy;2021 AmmarWaseem. designed by Ammar</p>
+            <p>copyright &copy; 2021 AmmarWaseem. Designed by Ammar</p>
         </div>
     </footer>
 </body>

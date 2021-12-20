@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Main Menu</title>
@@ -8,71 +9,42 @@
     <link th:href="@{/CSS/myStyles.css}" rel="stylesheet" href="../../static/CSS/myStyles.css">
     <link rel="stylesheet" href="../../static/CSS/navBar.css" th:href="@{/CSS/navBar.css}">
     <link rel="stylesheet" href="../../static/CSS/footer.css" th:href="@{/CSS/footer.css}">
+    <link rel="stylesheet" href="../../static/CSS/loader.css" th:href="@{/CSS/loader.css}">
     <link th:href="@{https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css}" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer th:src="@{/js/navBar.js}" src="../../static/js/navBar.js"></script>
+    <script defer th:src="@{/js/loader.js}" src="../../static/js/loader.js"></script>
+    <script defer th:src="@{/js/home.js}" src="../../static/js/home.js"></script>
 </head>
 <body>
-<div th:replace="fragments/Structure :: navBar"></div>
-<div class="home_content">
+    <div th:replace="fragments/Structure :: navBar"></div>
+    <div class="home_content">
+        <div class="content">
 
-    <span class="text">Welcome To Ammar/Omar's Online Website</span>
+        <h1 class="text">Welcome To Ammar's Family and Friends Online Website</h1>
 
-    <div class="randomText">
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
-    <p>
-        Habitasse hendrerit orci laoreet suspendisse molestie nascetur tristique commodo ultrices mollis nulla. Tristique gravida, consequat justo elementum commodo felis metus. Taciti aliquam nunc mus rutrum ultrices habitasse? Aenean nulla auctor scelerisque eleifend turpis. Metus, aliquet potenti iaculis magnis nam sagittis conubia natoque. Malesuada ridiculus cursus libero torquent varius. Auctor viverra risus curabitur rhoncus a habitasse sollicitudin! Mi, egestas metus adipiscing. Integer cubilia senectus cursus et natoque malesuada diam est semper pulvinar per. Nisi platea elementum senectus aliquam gravida suspendisse tortor mi litora ipsum accumsan odio. Duis iaculis sociosqu velit.
-    </p>
-    <p>
-        Quisque sagittis donec bibendum, ac leo phasellus. Metus viverra convallis justo fermentum rutrum integer placerat. Torquent volutpat curae; habitasse ac pulvinar nec nec turpis cras varius. Habitasse et habitasse penatibus blandit vel duis ridiculus curabitur habitant tristique magnis inceptos? Vitae vel lacus nisl blandit risus nullam eros non leo penatibus. Nec ac eleifend, elementum ut eget. Sagittis congue bibendum mauris. Dignissim vehicula metus odio at convallis turpis aliquet interdum class euismod. Imperdiet dictumst amet facilisis vel consectetur litora. Mi amet eleifend tincidunt conubia sed mollis pretium. Suscipit potenti interdum fringilla etiam netus faucibus eu!
-    </p>
-    <p>
+            <p>
+                Montes nisi sodales ad at. Elementum justo libero cursus himenaeos sodales? Parturient mus, duis tempus. Metus proin congue augue, volutpat cubilia curabitur sollicitudin pretium venenatis consequat. Molestie platea natoque eros aenean tellus porttitor maecenas venenatis. Convallis parturient condimentum volutpat in orci porta mauris conubia tellus magnis sem? Sed proin quam; malesuada semper dolor sem dictum faucibus nascetur mi a himenaeos. Turpis litora accumsan pharetra. Nibh aliquet fames, eleifend senectus dui.
+
+                Sodales sodales auctor venenatis pharetra facilisi habitant cum, gravida fames fringilla ut. Vehicula vitae nam amet dictumst; ac ante ullamcorper tempor ad fusce etiam. Mus dictumst, mollis vivamus integer magnis fermentum felis fringilla nec in bibendum nibh. Lectus potenti vestibulum condimentum montes feugiat nec aliquam eros sed fermentum dictum habitant. Placerat taciti facilisi in, pulvinar pretium orci bibendum faucibus. Condimentum curabitur ridiculus cum ultrices aenean, dapibus consectetur ipsum nec primis suscipit. Parturient senectus sed tempus litora. Enim ornare tellus, conubia sit sapien hendrerit venenatis rhoncus leo rutrum placerat? Velit posuere leo montes dui nam.
+
+                Dui, sociosqu fusce sit tellus. Porttitor vulputate hac faucibus dis est cursus nisi semper nulla eget facilisis bibendum. In dapibus montes enim hac. Lorem condimentum nec venenatis. Curae; justo adipiscing eu curabitur curabitur cursus dis dictumst habitant. Inceptos consectetur molestie cursus fringilla elit posuere eu volutpat. Sodales magnis integer tempor cubilia? Hendrerit imperdiet laoreet conubia suspendisse vivamus primis class rhoncus. Quisque blandit sodales curae; senectus magnis phasellus lectus feugiat sem. Dictumst quisque, vehicula sociosqu senectus amet ipsum imperdiet proin aliquet sociis primis? Fames rutrum a dictumst.
+
+                Nascetur curae; metus class dapibus vehicula dictumst semper sollicitudin metus quis! Orci felis urna vehicula commodo cubilia neque. Ac penatibus luctus cursus. Tristique diam luctus consectetur? Dolor odio hendrerit pretium netus natoque neque class molestie? Hac mattis congue euismod, lorem suscipit a cras imperdiet nisi interdum pellentesque. Euismod nascetur sociis non nec. Torquent ante magnis commodo duis mollis. Porttitor tellus malesuada faucibus proin augue montes condimentum lorem. Hac ad, pharetra porta vitae. Fusce, ad amet magna at litora enim.
+
+                Velit hendrerit ligula a dictumst morbi sit. Torquent rutrum convallis sem magnis posuere mattis sit sociosqu ligula felis! Habitasse eu molestie commodo placerat laoreet ante metus justo fringilla sodales primis tempus? Auctor proin fermentum mollis condimentum! Pharetra vehicula quam interdum condimentum. Erat ad himenaeos accumsan, vehicula dictum tortor. Eu parturient auctor cras ante scelerisque sagittis dis. Suspendisse hendrerit conubia pulvinar duis sociosqu natoque! Sapien ligula pulvinar himenaeos fames, commodo dictum fames.
+
+            </p>
+        </div>
+
+
+
+        <div th:replace="fragments/Structure :: footer">
+        </div>
     </div>
 
-    <div th:replace="fragments/Structure :: footer">
-
+    <div id="loader" class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
-</div>
 </body>
 </html>

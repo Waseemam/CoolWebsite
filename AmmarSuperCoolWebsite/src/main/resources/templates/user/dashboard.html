@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+    <link th:href="@{/CSS/structureStyles.css}" rel="stylesheet"
+          href="../../static/CSS/structureStyles.css">
+    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet" href="../../static/CSS/myStyles.css">
+    <link rel="stylesheet" href="../../static/CSS/navBar.css" th:href="@{/CSS/navBar.css}">
+    <link rel="stylesheet" href="../../static/CSS/footer.css" th:href="@{/CSS/footer.css}">
+    <link rel="stylesheet" href="../../static/CSS/loader.css" th:href="@{/CSS/loader.css}">
+    <link th:href="@{https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css}" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer th:src="@{/js/navBar.js}" src="../../static/js/navBar.js"></script>
+    <script defer th:src="@{/js/loader.js}" src="../../static/js/loader.js"></script>
+    <script defer th:src="@{/js/dashboard.js}" src="../../static/js/dashboard.js"></script>
+</head>
+<body>
+
+<div th:replace="fragments/Structure :: navBar"></div>
+<div class="home_content">
+    <div class="content">
+        <h1 class="text">Dashboard</h1>
+    </div>
+
+
+
+    <div th:replace="fragments/Structure :: footer">
+    </div>
+</div>
+
+<div id="loader" class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+</body>
+</html>
