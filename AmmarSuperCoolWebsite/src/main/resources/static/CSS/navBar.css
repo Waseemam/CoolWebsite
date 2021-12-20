@@ -276,6 +276,7 @@
     font-weight: bold;
     font-size: 32px;
     color: white;
+    margin-left: 50px;
 }
 
 .sidebar.active ~ .home_content{

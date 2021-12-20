@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Form</title>
-    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet"
-          href="../../static/CSS/myStyles.css">
+    <link th:href="@{/CSS/evaluation.css}" rel="stylesheet"
+          href="../../static/CSS/evaluation.css">
     <title>Gpa Calculator</title>
 </head>
-<div th:replace="fragments/basicStructure :: header('Gpa Calculator')"></div>
+<div th:replace="evaluation/fragments/basicStructure :: header('Gpa Calculator')"></div>
 <body>
-<div th:replace="fragments/basicStructure :: navbar(3)"></div>
+<div th:replace="evaluation/fragments/basicStructure :: navbar(3)"></div>
 
 <div class="errorText" th:if="${completed.size()} == 0">
     No Finished Courses Please Comeback when completing a course</div>

@@ -35,7 +35,7 @@ public class EvaluationController {
 
 	/* Loads the index page
 	 */
-	@GetMapping("/")
+	@GetMapping()
 	public String index() {
 		return "evaluation/user/index";
 	}

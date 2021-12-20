@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Course</title>
-    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet"
-          href="../../static/CSS/myStyles.css">
+    <link th:href="@{/CSS/evaluation.css}" rel="stylesheet"
+          href="../../static/CSS/evaluation.css">
     <title>Course Form</title>
 </head>
 
-<div th:replace="fragments/basicStructure :: header('Course Form')"></div>
+<div th:replace="evaluation/fragments/basicStructure :: header('Course Form')"></div>
 <body>
-<div th:replace="fragments/basicStructure :: navbar(4)"></div>
+<div th:replace="evaluation/fragments/basicStructure :: navbar(4)"></div>
 
 <form action="/addCourse" method="post" th:object="${course}">
     <p><label>Code: <input type="text" name="code" th:value="*{code}"

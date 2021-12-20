@@ -8,24 +8,23 @@
 <body>
 
 <header th:fragment="header(Title)">
-    <div class="logInfo">Logged in as <strong sec:authentication="name"></strong> | <a th:href="@{/logout}" th:text="Logout"></a></div>
+    <div sec:authorize="isAuthenticated()" class="logInfo">Logged in as <strong sec:authentication="name"></strong> | <a th:href="@{/logout}" th:text="Logout"></a></div>
 
     <h1 class="title" th:text="${Title}"></h1>
 
 </header>
 
-
 <div th:fragment="navbar(num)">
 
-    <div class="buttons" th:unless="${num==1}"><a th:href="@{/}">Main Menu</a>
+    <div class="buttons" th:unless="${num==1}"><a th:href="@{/evaluation}">Main Menu</a>
     </div>
-    <div class="buttons" th:unless="${num==2}"><a th:href="@{/evalForm}"
+    <div class="buttons" th:unless="${num==2}"><a th:href="@{/evaluation/evalForm}"
     >Evaluation Calculator</a></div>
-    <div class="buttons" th:unless="${num==3}"><a th:href="@{/gpaCalc}"
+    <div class="buttons" th:unless="${num==3}"><a th:href="@{/evaluation/gpaCalc}"
     >GPA Calculator</a></div>
-    <div class="buttons" th:unless="${num==4}"><a th:href="@{/addCourse}"
+    <div class="buttons" th:unless="${num==4}"><a th:href="@{/evaluation/addCourse}"
     >Add Course</a></div>
-    <div class="buttons" th:unless="${num==5}"><a th:href="@{/evalResults}"
+    <div class="buttons" th:unless="${num==5}"><a th:href="@{/evaluation/evalResults}"
     >Evaluation Results</a></div>
 
 </div>

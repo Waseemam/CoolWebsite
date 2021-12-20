@@ -2,19 +2,27 @@
     display: flex;
     padding: 20px;
     width: 90%;
+    margin-left: 100px;
 }
 
 .flexContainer .about-me{
-    width: 50%;
+    width: 60%;
     height: fit-content;
-    background-color: grey;
-    padding: 20px
+    border: 1px red solid;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow:0 0 1rem red;
 }
 
 .flexContainer .about-me .paragraph{
-    color: #ceffff;
+    color: white;
 
 }
-.flexContainer .about-me .myImage{
-    width: 1.5vh;
+.flexContainer .myImage img{
+    margin-left: 140px;
+    border: 1px red solid;
+    padding: 20px;
+    margin-top: -50px;
+    border-radius: 95px;
+    box-shadow:0 0 1rem red;
 }

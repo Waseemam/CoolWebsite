@@ -1,6 +1,15 @@
-.home_content .content p{
-    margin-left: 50px;
+.home_content .content .welcomeText{
     margin-top: 20px;
+    margin-left: 120px;
+    width: 70rem;
+    height: fit-content;
+    border: 1px red solid;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow:0 0 1rem red;
+}
+
+.home_content .content .welcomeText span{
     color: white;
 }
 
