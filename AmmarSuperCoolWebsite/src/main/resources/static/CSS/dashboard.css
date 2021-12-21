@@ -1,0 +1,36 @@
+.scrollContainer{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto auto auto;
+    width: 1300px;
+    height: 600px;
+}
+
+.scrollContainer .scrollContainer-item{
+    width: 300px;
+    height: 200px;
+    text-align:center;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 0 20px red;
+    margin: 40px 0px 0px 50%;
+}
+
+.scrollContainer .scrollContainer-item img{
+    margin-bottom:10px;
+    padding: 10px;
+    height: 7rem;
+    width: auto;
+    border-radius: 15px;
+}
+
+.scrollContainer .scrollContainer-item .itemName{
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+a{
+    text-decoration:none;
+}

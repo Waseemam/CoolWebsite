@@ -17,6 +17,7 @@
     width: 100%;
     border:solid 4px lightseagreen;
     border-bottom: solid 2px lightseagreen;
+    color: white;
 
 }
 
@@ -33,6 +34,7 @@
 
 body {
     padding: 0;
+    background-color: #1a1a1a;
 }
 
 .buttons:hover {

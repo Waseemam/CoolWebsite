@@ -269,7 +269,8 @@
 }
 
 .home_content .content{
-    padding: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .home_content .content .pageTitle{
@@ -278,6 +279,12 @@
     color: white;
     margin-left: 50px;
 }
+
+
+.home_content .content .pageTitle{
+    color: white;
+}
+
 
 .sidebar.active ~ .home_content{
     width: calc(100% - 240px);

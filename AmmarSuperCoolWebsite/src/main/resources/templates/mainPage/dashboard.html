@@ -5,7 +5,7 @@
     <title>Main Menu</title>
     <link th:href="@{/CSS/structureStyles.css}" rel="stylesheet"
           href="../../static/CSS/structureStyles.css">
-    <link th:href="@{/CSS/myStyles.css}" rel="stylesheet" href="../../static/CSS/myStyles.css">
+    <link rel="stylesheet" href="../../static/CSS/dashboard.css" th:href="@{/CSS/dashboard.css}">
     <link rel="stylesheet" href="../../static/CSS/navBar.css" th:href="@{/CSS/navBar.css}">
     <link rel="stylesheet" href="../../static/CSS/footer.css" th:href="@{/CSS/footer.css}">
     <link rel="stylesheet" href="../../static/CSS/loader.css" th:href="@{/CSS/loader.css}">
@@ -21,9 +21,47 @@
 <div class="home_content">
     <div class="content">
         <h1 class="pageTitle">Dashboard</h1>
+
+        <div class="scrollContainer">
+            <div class="scrollContainer-item">
+                <a th:href="@{/evaluation}">
+                    <img th:src="@{images/evaluation.jpg}" alt="">
+                    <span class="itemName">Evaluation Tracker</span>
+                </a>
+            </div>
+            <div class="scrollContainer-item">
+                <a th:href="@{/evaluation}">
+                    <img th:src="@{images/evaluation.jpg}" alt="">
+                    <span class="itemName">Evaluation Tracker</span>
+                </a>
+            </div>
+            <div class="scrollContainer-item">
+                <a th:href="@{/evaluation}">
+                    <img th:src="@{images/evaluation.jpg}" alt="">
+                    <span class="itemName">Evaluation Tracker</span>
+                </a>
+            </div>
+            <div class="scrollContainer-item">
+                <a th:href="@{/evaluation}">
+                    <img th:src="@{images/evaluation.jpg}" alt="">
+                    <span class="itemName">Evaluation Tracker</span>
+                </a>
+            </div><div class="scrollContainer-item">
+            <a th:href="@{/evaluation}">
+                <img th:src="@{images/evaluation.jpg}" alt="">
+                <span class="itemName">Evaluation Tracker</span>
+            </a>
+        </div>
+            <div class="scrollContainer-item">
+                <a th:href="@{/evaluation}">
+                    <img th:src="@{images/evaluation.jpg}" alt="">
+                    <span class="itemName">Evaluation Tracker</span>
+                </a>
+            </div>
+
+        </div>
+
     </div>
-
-
 
     <div th:replace="fragments/Structure :: footer">
     </div>
