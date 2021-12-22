@@ -10,7 +10,7 @@
 <body>
 <div th:replace="evaluation/fragments/basicStructure :: navbar(2)"></div>
 
-<form action="/evalResults" method="post" th:object="${evaluation}">
+<form action="/evaluation/evalResults" method="post" th:object="${evaluation}">
 
     <input type="hidden" th:value="*{id}" name="id">
 

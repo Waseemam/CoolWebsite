@@ -3,8 +3,7 @@
     justify-items: center;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: auto auto auto;
-    width: 1300px;
-    height: 600px;
+    width: 80%;
 }
 
 .scrollContainer .scrollContainer-item{
