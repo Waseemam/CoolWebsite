@@ -1,5 +1,4 @@
 footer{
-    position: absolute;
     background: black;
     bottom: 0;
     left: 0;
@@ -9,7 +8,7 @@ footer{
     font-family: "Open Sans";
     text-align: center;
     color: white;
-    padding-top: 25px;
+    margin-top: 25px;
 }
 
 .footer-content{
