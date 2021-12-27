@@ -82,7 +82,7 @@ public class EvaluationController {
 		// refreshes the session attribute for courses
 		session.setAttribute("courses", da.getCourses());
 		// sends you back to the index page
-		return "redirect:evaluation/";
+		return "redirect:";
 	}
 
 	/* Calculates Cumulative gpa and gathers total number of credits
@@ -188,7 +188,7 @@ public class EvaluationController {
 	 */
 	@GetMapping("/permissionDenied")
 	public String errorMessage() {
-		return "error/permissionDenied";
+		return "evaluation/error/permissionDenied";
 	}
 
 
