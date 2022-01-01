@@ -33,6 +33,12 @@ public class EvaluationController {
 		this.da = databaseAccess;
 	}
 
+	@GetMapping("/test")
+	public String indexs(){
+		return "/mainPage/index";
+	}
+
+
 	/* Loads the index page
 	 */
 	@GetMapping()
