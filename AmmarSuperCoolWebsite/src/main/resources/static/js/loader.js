@@ -1,5 +1,6 @@
 console.log("Loader connected")
 removeFadeOut(document.getElementById("loader"), 1500);
+
 function removeFadeOut( el, speed ) {
     setTimeout(function() {
         el.style.transition = "opacity " + .5 +"s ease";
